@@ -16,7 +16,7 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 		tempNode->left = tempNode->right = NULL;
 		tempNode->n = value;
 		parent = tempNode;
-		return;
+		return (NULL);
 	}
 	if (value < parent->n)
 	{
@@ -26,5 +26,4 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	{
 		insert(parent->right, value);
 	}
-	return (0);
 }
