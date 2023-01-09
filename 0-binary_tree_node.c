@@ -15,15 +15,15 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 		tempNode = malloc(sizeof(binary_tree_t));
 		tempNode->left = tempNode->right = NULL;
 		tempNode->n = value;
-		*parent = tempNode;
+		parent = tempNode;
 		return;
 	}
-	if (value < *parent->n)
+	if (value < parent->n)
 	{
-		insert(*parent->left, value);
+		insert(parent->left, value);
 	}
-	else if (value > *parent->n)
+	else if (value > parent->n)
 	{
-		insert(*parent->right, value);
+		insert(parent->right, value);
 	}
 }
