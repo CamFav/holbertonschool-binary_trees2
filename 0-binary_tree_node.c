@@ -14,7 +14,7 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	{
 		tempNode = malloc(sizeof(binary_tree_t));
 		tempNode->left = tempNode->right = NULL;
-		tempNode->n = val;
+		tempNode->n = value;
 		*parent = tempNode;
 		return;
 	}
