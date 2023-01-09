@@ -20,10 +20,10 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	}
 	if (value < parent->n)
 	{
-		insert(value, parent->left);
+		insert(parent->left, value);
 	}
 	else if (value > parent->n)
 	{
-		insert(value, parent->right);
+		insert(parent->right, value);
 	}
 }
