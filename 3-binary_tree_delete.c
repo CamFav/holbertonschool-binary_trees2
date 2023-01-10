@@ -8,5 +8,14 @@
 void binary_tree_delete(binary_tree_t *tree)
 {
 	if (!tree)
-		free(tree);
+		return;
+
+	if (tree->left || tree->right)
+	{
+		free(tree->left);
+		free(tree->right);
+		free(tree->parent);
+	}
+	free(tree->n);
+	free(tree);
 }
